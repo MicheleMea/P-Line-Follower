@@ -1,7 +1,7 @@
 #include <L298N.h>
 L298N motorDx(EN, IN1, IN2);
 L298N motorSx(EN, IN1, IN2);
-void muovi(unsigned short dx, unsigned short sx) { //speed value from -100 t0 100
+void move(unsigned short dx, unsigned short sx) { //speed value from -100 t0 100
   dx=map(dx, 0, 100, 0, 255);
   sx=map(sx, 0, 100, 0, 255);
   //dx
