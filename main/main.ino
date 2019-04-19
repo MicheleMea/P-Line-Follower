@@ -4,10 +4,11 @@
 #define IN2 5
 #define IN3 6
 #define IN4 7
-#include <movement.h>
 #define GREY 50
-const short Kp;
-void reflected(unsigned short pin){
+#include "movement.h" //NON USARE I SIMBOLI DI DISUGUAGLIANZA SE NO ARDUINO SI INCAZZA 
+const short Kp=1;
+short error;
+short reflected(unsigned short pin){
   unsigned short sum;
   for(int i=0;i<4;i++){
     sum+=analogRead(pin);
@@ -20,6 +21,6 @@ void setup(){
   }
 }
 void loop(){
-  error=grey-reflected(0);
-  move(50+error*Kp,50-error*Kp);
+  error=GREY-reflected(0);
+  move_robot(50+error*Kp,50-error*Kp);
 }
