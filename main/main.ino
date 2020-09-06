@@ -5,7 +5,7 @@
 #define IN3 6
 #define IN4 7
 #define GREY 50
-#include "movement.h" //NON USARE I SIMBOLI DI DISUGUAGLIANZA SE NO ARDUINO SI INCAZZA 
+#include "movement.h" //NON USARE I SIMBOLI DI MAGGIORE O MINORE SE NO ARDUINO SI INCAZZA 
 const short Kp=1;
 short error;
 short reflected(unsigned short pin){
